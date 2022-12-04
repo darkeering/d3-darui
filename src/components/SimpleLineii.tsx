@@ -166,6 +166,7 @@ export default class SimpleLineii extends Component {
 
     serie
       .append("path") // 绘画线条
+      .attr("class", "pathAnimation")
       .style("stroke", ColorSheet[0])
       .style("stroke-width", 1.5)
       .attr("fill", "none")

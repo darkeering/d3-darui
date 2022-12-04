@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pathAnimation {
+  stroke-dasharray: 3200;
+  stroke-dashoffset: 0;
+  animation: dash 2s linear;
+} 
+
+@keyframes dash {
+  from{
+    stroke-dashoffset: 3200;
+  }
+  to {
+    stroke-dashoffset: 10;
+  }
+}
