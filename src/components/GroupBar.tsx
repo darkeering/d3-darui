@@ -85,7 +85,11 @@ export default class GroupBar extends Component {
         // @ts-ignore
         .attr("x", xScale(d.date) + x1Scale(d.key) + x1Scale.bandwidth() / 2)
         // @ts-ignore
-        .attr("dy", yScale(d.value) - 10);
+        .attr("dy", yScale(d.value) - 10)
+        .attr('opacity', `0`)
+        .transition()
+        .duration(250)
+        .attr('opacity', `1`)
 
       tip
         .insert("rect", "text")
@@ -107,7 +111,11 @@ export default class GroupBar extends Component {
         })
         .attr("height", function (d: any) {
           return d.height + 2 * 3;
-        });
+        })
+        .attr('opacity', `0`)
+        .transition()
+        .duration(250)
+        .attr('opacity', `1`)
       tempTip = tip;
     };
 

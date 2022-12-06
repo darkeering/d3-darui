@@ -7,6 +7,7 @@ import SimpleBar from "./components/SimpleBar";
 import SimpleLine from './components/SimpleLine';
 import SimpleLineii from "./components/SimpleLineii";
 import GroupBar from "./components/GroupBar";
+import ChinaMap from "./components/ChinaMap";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/SimpleLine" element={<SimpleLine></SimpleLine>}></Route>
           <Route path="/SimpleLineii" element={<SimpleLineii></SimpleLineii>}></Route>
           <Route path="/GroupBar" element={<GroupBar></GroupBar>}></Route>
+          <Route path="/ChinaMap" element={<ChinaMap></ChinaMap>}></Route>
           <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
       </div>
