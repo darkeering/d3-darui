@@ -6,6 +6,7 @@ import SiderMenu from "./components/SiderMenu";
 import SimpleBar from "./components/SimpleBar";
 import SimpleLine from './components/SimpleLine';
 import SimpleLineii from "./components/SimpleLineii";
+import GroupBar from "./components/GroupBar";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<SimpleBar></SimpleBar>}></Route>
           <Route path="/SimpleLine" element={<SimpleLine></SimpleLine>}></Route>
           <Route path="/SimpleLineii" element={<SimpleLineii></SimpleLineii>}></Route>
+          <Route path="/GroupBar" element={<GroupBar></GroupBar>}></Route>
           <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
       </div>

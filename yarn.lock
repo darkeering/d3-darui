@@ -2115,6 +2115,13 @@
   resolved "https://registry.npmjs.org/@types/d3-timer/-/d3-timer-3.0.0.tgz#e2505f1c21ec08bda8915238e397fb71d2fc54ce"
   integrity sha512-HNB/9GHqu7Fo8AQiugyJbv6ZxYz58wef0esl4Mv828w1ZKpAshw/uFWVDUcIB9KKFeFKoxS3cHY07FFgtTRZ1g==
 
+"@types/d3-tip@^3.5.5":
+  version "3.5.5"
+  resolved "https://registry.npmjs.org/@types/d3-tip/-/d3-tip-3.5.5.tgz#efaf942fa6984ddb8061db1023934598a76cbc8c"
+  integrity sha512-MWt1tlChRfHZtwBh8kIOrJo//TC5cdH5UN+KwcAs4wbFi6wnQJtk/MY4LBr/ZG7b2BQmRNJXu+EMI6NnH6VmxQ==
+  dependencies:
+    "@types/d3" "^3"
+
 "@types/d3-transition@*":
   version "3.0.2"
   resolved "https://registry.npmjs.org/@types/d3-transition/-/d3-transition-3.0.2.tgz#393dc3e3d55009a43cc6f252e73fccab6d78a8a4"
@@ -2129,6 +2136,11 @@
   dependencies:
     "@types/d3-interpolate" "*"
     "@types/d3-selection" "*"
+
+"@types/d3@^3":
+  version "3.5.47"
+  resolved "https://registry.npmjs.org/@types/d3/-/d3-3.5.47.tgz#b81042fcb0195c583fc037bc857d161469a7d175"
+  integrity sha512-VkWIQoZXLFdcBGe5pdBKJmTU3fmpXvo/KV6ixvTzOMl1yJ2hbTXpfvsziag0kcaerPDwas2T0vxojwQG3YwivQ==
 
 "@types/d3@^7.4.0":
   version "7.4.0"
