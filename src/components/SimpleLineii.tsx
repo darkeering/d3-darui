@@ -127,6 +127,16 @@ export default class SimpleLineii extends Component {
       );
 
     main
+      .append("clipPath")
+      .attr("id", "clip")
+      .append("rect")
+      .attr("height", height)
+      .attr("width", 0)
+      .transition()
+      .duration(1000)
+      .attr("width", width);
+
+    main
       .append("g")
       .attr("class", "axis-x")
       .attr("transform", `translate(${0},${height})`)
@@ -166,7 +176,7 @@ export default class SimpleLineii extends Component {
 
     serie
       .append("path") // 绘画线条
-      .attr("class", "pathAnimation")
+      .attr("clip-path", "url(#clip)")
       .style("stroke", ColorSheet[0])
       .style("stroke-width", 1.5)
       .attr("fill", "none")

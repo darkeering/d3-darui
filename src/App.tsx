@@ -8,6 +8,10 @@ import SimpleLine from './components/SimpleLine';
 import SimpleLineii from "./components/SimpleLineii";
 import GroupBar from "./components/GroupBar";
 import ChinaMap from "./components/ChinaMap";
+import SimpleArea from "./components/SimpleArea";
+import SimplePie from "./components/SimplePie";
+import SimpleRing from "./components/SimpleRing";
+import SimpleTree from "./components/SimpleTree";
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
           <Route path="/SimpleLineii" element={<SimpleLineii></SimpleLineii>}></Route>
           <Route path="/GroupBar" element={<GroupBar></GroupBar>}></Route>
           <Route path="/ChinaMap" element={<ChinaMap></ChinaMap>}></Route>
+          <Route path="/SimpleArea" element={<SimpleArea></SimpleArea>}></Route>
+          <Route path="/SimplePie" element={<SimplePie></SimplePie>}></Route>
+          <Route path="/SimpleRing" element={<SimpleRing></SimpleRing>}></Route>
+          <Route path="/SimpleTree" element={<SimpleTree></SimpleTree>}></Route>
           <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
       </div>
