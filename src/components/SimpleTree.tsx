@@ -18,13 +18,6 @@ export default class SimpleTree extends Component {
               { name: "气化，气体/液体/化学品和IGCC" },
               { name: "重油升级和油砂" },
               { name: "碳氢运输 - 管道" },
-              { name: "液化天然气（LNG）" },
-              { name: "海上油气生产" },
-              { name: "陆上油气生产" },
-              { name: "石油炼制" },
-              { name: "多晶硅" },
-              { name: "硫回收" },
-              { name: "通用工具和设备" },
             ],
           },
           {
@@ -47,10 +40,6 @@ export default class SimpleTree extends Component {
               { name: "重民事" },
               { name: "离岸风电场" },
               { name: "港口和船舶码头" },
-              { name: "公私合作伙伴关系" },
-              { name: "铁路和公交" },
-              { name: "电信" },
-              { name: "收费公路和公路" },
             ],
           },
           {
@@ -90,11 +79,6 @@ export default class SimpleTree extends Component {
               { name: "高级过程建模" },
               { name: "施工驱动执行" },
               { name: "设计能力" },
-              { name: "设计评估" },
-              { name: "工程能力" },
-              { name: "前端工程与设计（FEED）能力" },
-              { name: "项目管理" },
-              { name: "价值工程" },
             ],
           },
           {
@@ -126,10 +110,6 @@ export default class SimpleTree extends Component {
               { name: "资产管理解决方案" },
               { name: "电气与仪表" },
               { name: "织物维护" },
-              { name: "检验和诚信" },
-              { name: "机械与管道" },
-              { name: "电力服务与产品" },
-              { name: "设备，工具和车队服务" },
             ],
           },
         ],
@@ -146,10 +126,6 @@ export default class SimpleTree extends Component {
             children: [
               { name: "专长" },
               { name: "历史" },
-              { name: "创新" },
-              { name: "简介" },
-              { name: "资质" },
-              { name: "技术水平" },
             ],
           },
           {
@@ -190,10 +166,6 @@ export default class SimpleTree extends Component {
               { name: "化工与石油化工" },
               { name: "生命科学" },
               { name: "矿业" },
-              { name: "模块化施工" },
-              { name: "核" },
-              { name: "海上" },
-              { name: "石油炼制" },
               { name: "管道" },
             ],
           },
@@ -209,12 +181,6 @@ export default class SimpleTree extends Component {
             name: "社区",
             children: [
               { name: "社区发展" },
-              { name: "教育" },
-              { name: "员工志愿服务" },
-              { name: "环境管理" },
-              { name: "给予" },
-              { name: "全球社区项目基金" },
-              { name: "社区影响报告" },
               { name: "社会服务" },
             ],
           },
@@ -224,10 +190,6 @@ export default class SimpleTree extends Component {
               { name: "反腐倡议" },
               { name: "合规与道德热线" },
               { name: "合规与道德行动" },
-              { name: "程序结构" },
-              { name: "供应商期望" },
-              { name: "代码" },
-              { name: "工人福利" },
               { name: "伦理领导力" },
             ],
           },
@@ -278,7 +240,7 @@ export default class SimpleTree extends Component {
   componentDidMount(): void {
     const data = this.data;
     const containerWidth = this.chartRef.parentElement.offsetWidth;
-    const containerHeight = 2500;
+    const containerHeight = 1500;
     const margin = { top: 80, right: 250, bottom: 80, left: 200 };
     const width = containerWidth - margin.left - margin.right;
     const height = containerHeight - margin.top - margin.bottom;
@@ -286,8 +248,8 @@ export default class SimpleTree extends Component {
     const chart = d3
       .select(this.chartRef)
       .attr("class", "chart")
-      .attr("width", containerWidth)
-      .attr("height", containerHeight);
+      .attr('preserveAspectRatio', 'xMidYMid meet')
+      .attr('viewBox',  `0 0 ${containerWidth} ${containerHeight}`)
 
     const main = chart
       .append("g")
@@ -356,6 +318,7 @@ export default class SimpleTree extends Component {
       .attr("dx", function (d) {
         return d.children ? -8 : 8;
       })
+      .attr('font-size', '12px')
       .style("fill", "#000")
       .style("text-anchor", (d) => (d.children ? "end" : "start"))
       .text((d: any) => d.data.name);
@@ -363,7 +326,7 @@ export default class SimpleTree extends Component {
   chartRef: any;
   render() {
     return (
-      <div>
+      <div style={{width: '60%'}}>
         <svg ref={(r) => (this.chartRef = r)}></svg>
       </div>
     );

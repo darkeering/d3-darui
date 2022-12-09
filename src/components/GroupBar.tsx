@@ -34,8 +34,8 @@ export default class GroupBar extends Component {
     const height = containerHeight - margin.top - margin.bottom;
     const chart = d3
       .select(this.chartRef)
-      .attr("width", containerWidth)
-      .attr("height", containerHeight);
+      .attr('preserveAspectRatio', 'xMidYMid meet')
+      .attr('viewBox',  `0 0 ${containerWidth} ${containerHeight}`)
     const main = chart
       .append("g")
       .attr("width", width)

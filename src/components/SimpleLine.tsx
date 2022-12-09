@@ -28,8 +28,8 @@ export default class SimpleLine extends Component {
     const height = containerHeight - margin.top - margin.bottom;
     let chart = d3
       .select(this.chartRef)
-      .attr("width", containerWidth)
-      .attr("height", containerHeight);
+      .attr('preserveAspectRatio', 'xMidYMid meet')
+      .attr('viewBox',  `0 0 ${containerWidth} ${containerHeight}`)
 
     // 图表主体
     let g = chart

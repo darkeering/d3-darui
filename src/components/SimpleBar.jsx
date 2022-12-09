@@ -24,8 +24,8 @@ export default class SimpleBar extends Component {
     const height = 500 - margin.top - margin.bottom;
     let chart = d3
       .select(this.chartRef)
-      .attr("width", containerWidth)
-      .attr("height", 500);
+      .attr('preserveAspectRatio', 'xMidYMid meet')
+      .attr('viewBox',  `0 0 ${containerWidth} ${500}`)
 
     let x = d3
       .scaleBand()

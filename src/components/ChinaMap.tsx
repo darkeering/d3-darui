@@ -36,8 +36,8 @@ export default class ChinaMap extends Component {
     const chart = d3
       .select(this.chartRef)
       .attr("class", "chart")
-      .attr("width", containerWidth)
-      .attr("height", containerHeight);
+      .attr('preserveAspectRatio', 'xMidYMid meet')
+      .attr('viewBox',  `0 0 ${containerWidth} ${containerHeight}`)
     const main = chart
       .append("g")
       .attr("class", "main")
