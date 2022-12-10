@@ -41,6 +41,10 @@ class SiderMenu extends Component<any, any> {
       label: <Link to={"/SimpleTree"}>SimpleTree</Link>,
       key: "/SimpleTree",
     },
+    {
+      label: <Link to={"/SimplePoints"}>SimplePoints</Link>,
+      key: "/SimplePoints",
+    },
   ];
   constructor(props: any) {
     super(props);
