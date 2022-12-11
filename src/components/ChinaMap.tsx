@@ -104,8 +104,6 @@ export default class ChinaMap extends Component {
   getMapData = async () => {
     const res = await fetch("http://cdn.a4z.cn/json/china.geojson");
     const data = await res.json();
-    console.log(data);
-
     this.setState({ data: data });
   };
   chartRef: any;

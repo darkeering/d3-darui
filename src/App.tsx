@@ -13,6 +13,8 @@ import SimplePie from "./components/SimplePie";
 import SimpleRing from "./components/SimpleRing";
 import SimpleTree from "./components/SimpleTree";
 import SimplePoints from "./components/SimplePoints";
+import SimpleStackBar from "./components/SimpleStackBar";
+import RadialStack from "./components/RadialStack";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           <Route path="/SimpleRing" element={<SimpleRing></SimpleRing>}></Route>
           <Route path="/SimpleTree" element={<SimpleTree></SimpleTree>}></Route>
           <Route path="/SimplePoints" element={<SimplePoints></SimplePoints>}></Route>
+          <Route path="/SimpleStackBar" element={<SimpleStackBar></SimpleStackBar>}></Route>
+          <Route path="/RadialStack" element={<RadialStack></RadialStack>}></Route>
           <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
       </div>

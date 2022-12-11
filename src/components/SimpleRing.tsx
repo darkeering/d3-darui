@@ -43,7 +43,6 @@ export default class SimpleRing extends Component {
 
     const pie = d3.pie().value((d: any) => d.population);
     const piedata = pie(data as any);
-    console.log(piedata);
 
     const outerRadius = radius;
     const innerRadius = radius * 0.7;
