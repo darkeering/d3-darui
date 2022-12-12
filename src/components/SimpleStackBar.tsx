@@ -95,6 +95,10 @@ export default class SimpleStackBar extends Component {
       .attr("transform", `translate(0, ${yScale(0)})`)
       .call(xAxis);
     main.append("g").call(yAxis);
+
+
+    
+
   }
   chartRef: any;
   render() {

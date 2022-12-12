@@ -43,9 +43,9 @@ export default class RadialStack extends Component {
       left: 60,
     };
     const containerWidth = this.chartRef.parentElement.offsetWidth;
-    const containerHeight = 1000;
-    const width = containerWidth - margin.left - margin.right;
-    const height = containerHeight - margin.top - margin.bottom;
+    const containerHeight = 800;
+    const width = containerWidth;
+    const height = containerHeight;
     const chart = d3
       .select(this.chartRef)
       .attr("preserveAspectRatio", "xMidYMid meet")
@@ -184,12 +184,44 @@ export default class RadialStack extends Component {
           .padAngle(0.01)
           .padRadius(innerRadius) as any
       );
+
+    const legends = chart.append("g").attr("class", "legends");
+
+    const legend = legends
+      .selectAll("legend")
+      .data(keys)
+      .enter()
+      .append("g")
+      .attr("transform", (d, i) => `translate(0, ${i * 25})`);
+    legend
+      .append("text")
+      .text((d: any, i) => `第${i + 1}季度`)
+      .attr("font-size", "16px")
+      .attr("dy", 14)
+      .attr("dx", 20);
+    legend
+      .append("rect")
+      .attr("width", 18)
+      .attr("height", 18)
+      .attr("fill", (d: any, i: any) => ColorSheet[i]);
+
+    chart
+      .select(".legends")
+      .datum(function () {
+        return this;
+      })
+      .attr("transform", (d: any) => {
+        const node = d.getBBox();
+        return `translate(${containerWidth / 2 - node.width / 2}, ${
+          containerHeight / 2 - node.height / 2
+        })`;
+      });
   }
 
   chartRef: any;
   render() {
     return (
-      <div>
+      <div style={{width: '50%'}}>
         <svg ref={(r) => (this.chartRef = r)}></svg>
       </div>
     );
