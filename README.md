@@ -1,3 +1,4 @@
+# 样例
 - 简单柱状图
   ![简单柱状图](./assests/SimpleBar.png)
 - 简单折线图
@@ -26,3 +27,6 @@
   ![简单力图](./assests/SimpleForce.png)
 - 简单标签云图
   ![简单标签云图](./assests/SimpleTagCloud.png)
+
+# 参考
+[样例参考地址](http://www.a4z.cn/pui/ant-admin.html#/simple-bar-chart)
